@@ -8,6 +8,11 @@ Contributors:
 https://github.com/rootzoll/dogecoin-altar
 https://github.com/johncoffee/doge-altar
 
+Purpose:
+
+The script is checking the balance of the burn-address of Dogecoin frequently and triggers a LED-Light on the Raspi
+if new Dogecoins came in to get burned
+
 Steps:
 
 - Use a "burn" dogecoin address: DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr
@@ -22,7 +27,7 @@ Steps:
     -> if no: goto a)
     
 - Action 1: LED-Fire: Attach LED to Raspberry 3 Model B</br>
-    (see pin wiring http://raspberrypiguide.de/howtos/raspberry-pi-gpio-how-to/)
+    (see pin wiring http://raspberrypiguide.de/howtos/raspberry-pi-gpio-how-to/)</br>
     -> PIN 9 (Ground)</br>
     -> PIN 11 (3.3V)
     
@@ -34,4 +39,9 @@ Steps:
         -> sudo raspi-config -> Select “Boot Options” then “Desktop/CLI” then “Console Autologin”
         -> sudo nano /etc/profile -> add path to python script at the bottom:
             -> sudo python /path/to/script/myscript.py & (& to run in background)
+            
+How to deploy:
+
+- put the file dogealtar_at_pi.py under /home/pi
+- put the script startup.sh under /home/pi
 
