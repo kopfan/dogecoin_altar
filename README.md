@@ -21,7 +21,9 @@ Steps:
     -> if yes: trigger action: LED-Fire & Sound</br>
     -> if no: goto a)
     
-- Action 1: LED-Fire: Attach LED to Raspberry 3 Model B
+- Action 1: LED-Fire: Attach LED to Raspberry 3 Model B</br>
+    (see pin wiring http://raspberrypiguide.de/howtos/raspberry-pi-gpio-how-to/)
+    -> PIN 9 (Ground)</br>
     -> PIN 11 (3.3V)
     
 - Action 2: Sound: tbd.
